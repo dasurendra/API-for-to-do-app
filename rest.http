@@ -1,0 +1,24 @@
+#API list for not to do app
+
+###fetch all tickets
+
+
+GET http://localhost:8000/api/v1
+# ### fetch single ticket
+# GET hhtp://localhost:8000/api/v1/ticektid
+
+###create new ticket
+
+POST http://localhost:8000/api/v1/
+Content-Type: application/json
+
+{
+    "email":"bchjsidh@dklsfmk.com",
+    "password":"jdfodls"
+}
+
+
+
+###delete request
+
+DELETE http://localhost:8000/api/v1/
