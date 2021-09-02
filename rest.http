@@ -13,7 +13,7 @@ POST http://localhost:8000/api/v1/
 Content-Type: application/json
 
 {
-    "task":"coding",
+    "task":"codingxczxc",
     "hr":10
 }
 

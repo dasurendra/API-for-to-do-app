@@ -1,6 +1,6 @@
 import express from "express";
 const router = express.Router();
-import { inserTask } from "./models/TaskList.model.js";
+import { inserTask, readTask } from "./models/TaskList.model.js";
 
 router.all("/", (req, res, next) => {
   console.log("got it hit");
@@ -8,11 +8,22 @@ router.all("/", (req, res, next) => {
   next();
 });
 //returns all the task
-router.get("/", (req, res) => {
-  console.log(req.body);
-  res.json({
-    message: "return from get",
-  });
+router.get("/", async (req, res) => {
+  try {
+    const output = await readTask();
+
+    res.json({
+      status: "sucess",
+      message: "return from get",
+      output,
+    });
+  } catch (error) {
+    res.json({
+      status: "error",
+      message: "return from get",
+      output,
+    });
+  }
 });
 
 //recive new task  and stores in database

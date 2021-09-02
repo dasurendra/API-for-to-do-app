@@ -16,6 +16,16 @@ export const inserTask = (newTask) => {
 };
 
 //read all task
+export const readTask = () => {
+  return new Promise(async (resolve, reject) => {
+    try {
+      const result = await Taskschema.find();
+      resolve(result);
+    } catch (error) {
+      reject(error);
+    }
+  });
+};
 
 //get single task
 
