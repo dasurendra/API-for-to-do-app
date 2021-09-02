@@ -13,8 +13,19 @@ POST http://localhost:8000/api/v1/
 Content-Type: application/json
 
 {
-    "email":"bchjsidh@dklsfmk.com",
-    "password":"jdfodls"
+    "task":"coding",
+    "hr":10
+}
+
+
+###update request
+
+PATCH  http://localhost:8000/api/v1/
+Content-Type: application/json
+
+{
+    "__id":"bchjsidh@dklsfmk.com",
+    "todo":true
 }
 
 
@@ -22,3 +33,12 @@ Content-Type: application/json
 ###delete request
 
 DELETE http://localhost:8000/api/v1/
+Content-Type: application/json
+
+{
+    "__id":"bchjsidh@dklsfmk.com"
+   
+
+}
+
+

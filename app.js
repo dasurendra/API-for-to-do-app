@@ -1,9 +1,18 @@
 import express from "express";
 const app = express();
+import morgan from "morgan";
+
 const port = 8000;
 
+//conect to the mongo db
+
+import mongoClient from "./src/config/db.js";
+mongoClient();
+
+//midleware
 app.use(express.urlencoded());
 app.use(express.json());
+app.use(morgan("tiny"));
 
 //load modules
 
