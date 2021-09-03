@@ -1,18 +1,25 @@
 import Taskschema from "./TaskList.schema.js";
 
 //create Task
-export const inserTask = (newTask) => {
-  return new Promise((resolve, reject) => {
-    console.log(newTask, "from models");
-    Taskschema(newTask)
-      .save()
-      .then((data) => {
-        resolve(data);
-      })
-      .catch((error) => {
-        reject(error);
-      });
-  });
+// export const inserTask = (newTask) => {
+//   return new Promise((resolve, reject) => {
+//     console.log(newTask, "from models");
+//     Taskschema(newTask)
+//       .save()
+//       .then((data) => {
+//         resolve(data);
+//       })
+//       .catch((error) => {
+//         reject(error);
+//       });
+
+export const inserTask = async (newTask) => {
+  try {
+    const data = await Taskschema(newTask).save();
+    return data;
+  } catch (error) {
+    return error;
+  }
 };
 
 //read all task
