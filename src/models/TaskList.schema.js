@@ -5,12 +5,17 @@ const TaskListSchemea = mongoose.Schema(
     task: {
       type: String,
       required: true,
-      default: "vdsfd",
+      default: "dfzd",
     },
     hr: {
       type: Number,
       required: [true, "Please provide the task"],
       default: 0,
+    },
+    todo: {
+      type: Boolean,
+      required: true,
+      default: true,
     },
   },
   {

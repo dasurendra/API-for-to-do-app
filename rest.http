@@ -2,10 +2,11 @@
 
 ###fetch all tickets
 
+GET http://localhost:8000/api/v1/
 
-GET http://localhost:8000/api/v1
+
 # ### fetch single ticket
-# GET hhtp://localhost:8000/api/v1/ticektid
+# GET http://localhost:8000/api/v1/6130a97baca58c9cd436196d
 
 ###create new ticket
 
@@ -13,7 +14,7 @@ POST http://localhost:8000/api/v1/
 Content-Type: application/json
 
 {
-    "task":"Coding JS",
+    "task":"Coding Java",
     "hr":10
 }
 
@@ -24,8 +25,8 @@ PATCH  http://localhost:8000/api/v1/
 Content-Type: application/json
 
 {
-    "__id":"bchjsidh@dklsfmk.com",
-    "todo":true
+    "id":"6132d9ebf31bdc7e9d3f8c6f",
+    "todo":false
 }
 
 
@@ -36,7 +37,7 @@ DELETE http://localhost:8000/api/v1/
 Content-Type: application/json
 
 {
-    "__id":"bchjsidh@dklsfmk.com"
+    "ids":["6130a988aca58c9cd436196f"]
    
 
 }
